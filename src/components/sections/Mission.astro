@@ -1,0 +1,90 @@
+---
+type MissionContent = {
+  title: string;
+  lead: string;
+  points: { title: string; text: string }[];
+};
+
+const { content } = Astro.props as { content: MissionContent };
+---
+
+<section class="section" aria-labelledby="mission-title">
+  <div class="container">
+    <div class="mission note">
+      <div class="mission__head">
+        <h2 id="mission-title">{content.title}</h2>
+        <p class="muted">{content.lead}</p>
+      </div>
+
+      <div class="mission__grid">
+        {content.points.map((p) => (
+          <article class="mission__card">
+            <h3>{p.title}</h3>
+            <p class="muted">{p.text}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .mission {
+    padding: var(--s-10);
+  }
+
+  h2 {
+    margin: 0 0 var(--s-3);
+    font-size: clamp(1.5rem, 2.2vw, 2rem);
+    letter-spacing: -0.01em;
+  }
+
+  .mission__head p {
+    margin: 0;
+    max-width: 70ch;
+  }
+
+  .mission__grid {
+    margin-top: var(--s-8);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--s-6);
+  }
+
+  .mission__card {
+    padding: var(--s-6);
+    border-radius: var(--radius-sm);
+    border: 2px dashed rgba(17, 17, 17, 0.20);
+    background: rgba(251, 247, 239, 0.70);
+    transform: rotate(-0.2deg);
+  }
+
+  .mission__card:nth-child(2) {
+    transform: rotate(0.35deg);
+  }
+  .mission__card:nth-child(3) {
+    transform: rotate(-0.45deg);
+  }
+
+  .mission__card h3 {
+    margin: 0 0 var(--s-2);
+    font-size: 1.1rem;
+  }
+
+  .mission__card p {
+    margin: 0;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .mission__card {
+      transform: none;
+    }
+  }
+
+  @media (max-width: 900px) {
+    .mission__grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+

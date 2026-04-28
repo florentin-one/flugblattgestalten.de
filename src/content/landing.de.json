@@ -1,0 +1,79 @@
+{
+  "seo": {
+    "title": "FlugblattGestalten — Kunst & Aktivismus zum Mitmachen (Hannover)",
+    "description": "Wir bieten an, Flugblätter zu gestalten, damit Leute wieder das Gefühl bekommen: Ihre Meinung ist unperfekt, absolut politisch – und darf gehört werden."
+  },
+  "hero": {
+    "kicker": "Kunst · Aktivismus · grober Unfug",
+    "headline": "Flugblätter gestalten, damit Stimmen wieder hörbar werden.",
+    "subhead": "„Deine Meinung ist unperfekt, absolut politisch – und darf gehört werden.“ Wir machen Räume, in denen Menschen gemeinsam kritzeln, drucken, rausgehen — und merken: Selbstwirksamkeit ist ansteckend.",
+    "bullets": [
+      "Alles kann, nix muss.",
+      "Lokal vor viral. Erstmal Hannover.",
+      "Gemeinschaft statt Algorithmus."
+    ],
+    "ctaPrimary": {
+      "label": "Mitmachen",
+      "href": "#mitmachen"
+    },
+    "ctaSecondary": {
+      "label": "Wie läuft das ab?",
+      "href": "#ablauf"
+    }
+  },
+  "mission": {
+    "title": "Warum wir das machen",
+    "lead": "Wir sind irgendwas zwischen Kunst & Aktivismus — mit ’ner Prise groben Unfugs. Politik passiert nicht nur im Bundestag, sondern auch auf der Straße, an der Mülltonne mit Wackelaugen, auf der Blumenwiese, die wir selbst gesät haben.",
+    "points": [
+      {
+        "title": "Jede Stimme zählt",
+        "text": "Auch die unsichere, wütende, hoffnungsvolle."
+      },
+      {
+        "title": "Selbstwirksamkeit ist ansteckend",
+        "text": "Wer einmal erlebt, dass die eigene Aktion etwas bewirkt, macht weiter."
+      },
+      {
+        "title": "Kreativität als Widerstand",
+        "text": "Humor, Kunst und Provokation gegen soziale Kälte und demokratischen Abbau."
+      }
+    ]
+  },
+  "howItWorks": {
+    "title": "Wie läuft das ab?",
+    "subtitle": "Niedrigschwellig. Gemeinsam. Und mit genug Chaos, damit’s Spaß macht.",
+    "steps": [
+      {
+        "title": "Idee mitbringen",
+        "text": "Du musst nicht „fertig politisch“ sein. Ein Gefühl, ein Satz, ein Thema reicht."
+      },
+      {
+        "title": "Gemeinsam gestalten",
+        "text": "Plakat, Postkarte, Flugblatt, Siebdruck: Wir kritzeln, testen, lachen — und machen es konkret."
+      },
+      {
+        "title": "Drucken & Material ready",
+        "text": "Wir bauen Infrastruktur auf, damit du nicht bei null anfängst."
+      },
+      {
+        "title": "Raus damit",
+        "text": "Straße, Aktionen, Demos, Postkarten: sichtbar, aber nicht um jeden Preis."
+      },
+      {
+        "title": "Feiern & lernen",
+        "text": "Kleine Erfolge zählen. „hyper hyper bei alle“ — auch den kleinen."
+      }
+    ]
+  },
+  "contact": {
+    "title": "Mitmachen / Kontakt",
+    "text": "Schreib uns eine Mail oder bring dich beim nächsten Treffen rein. (Kontaktadresse kann hier angepasst werden.)",
+    "email": "mitmachen@flugblattgestalten.de",
+    "location": "Hannover + Region",
+    "note": "Motto: „Uns ist egal, ob andere davon erfahren — Hauptsache, wir machen’s.“"
+  },
+  "footer": {
+    "smallprint": "FlugblattGestalten · Hannover · Lokal vor viral."
+  }
+}
+

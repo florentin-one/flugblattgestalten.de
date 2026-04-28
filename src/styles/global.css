@@ -1,0 +1,176 @@
+@import "./tokens.css";
+
+/* Base reset-ish */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  color: var(--ink);
+  background: var(--paper);
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  line-height: 1.55;
+
+  /* DIY paper texture (pure CSS: subtle, lightweight) */
+  background:
+    radial-gradient(1200px 800px at 10% 0%, rgba(242, 194, 0, 0.10), transparent 60%),
+    radial-gradient(900px 700px at 85% 10%, rgba(17, 17, 17, 0.05), transparent 62%),
+    radial-gradient(700px 500px at 30% 80%, rgba(17, 17, 17, 0.04), transparent 60%),
+    repeating-linear-gradient(
+      -8deg,
+      rgba(17, 17, 17, 0.016) 0px,
+      rgba(17, 17, 17, 0.016) 2px,
+      transparent 2px,
+      transparent 10px
+    );
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+}
+
+a:hover {
+  text-decoration-style: wavy;
+}
+
+:focus-visible {
+  outline: 3px solid var(--sun);
+  outline-offset: 4px;
+}
+
+/* Layout utilities */
+.container {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 var(--s-6);
+}
+
+.section {
+  padding: var(--s-16) 0;
+}
+
+@media (max-width: 640px) {
+  .container {
+    padding: 0 var(--s-4);
+  }
+  .section {
+    padding: var(--s-12) 0;
+  }
+}
+
+/* DIY building blocks */
+.note {
+  background: linear-gradient(180deg, var(--paper), var(--paper-2));
+  border: 2px solid rgba(17, 17, 17, 0.20);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.note--soft {
+  box-shadow: var(--shadow-soft);
+}
+
+.sticker {
+  display: inline-block;
+  padding: 0.35rem 0.65rem;
+  border: 2px solid rgba(17, 17, 17, 0.25);
+  border-radius: 999px;
+  background: rgba(242, 194, 0, 0.22);
+  font-family: var(--font-accent);
+  letter-spacing: 0.02em;
+}
+
+.marker {
+  position: relative;
+  display: inline-block;
+  z-index: 0;
+}
+.marker::before {
+  content: "";
+  position: absolute;
+  left: -0.12em;
+  right: -0.12em;
+  bottom: 0.10em;
+  height: 0.55em;
+  background: rgba(242, 194, 0, 0.35);
+  border-radius: 6px;
+  z-index: -1;
+  transform: rotate(-1.2deg);
+}
+
+.btnRow {
+  display: flex;
+  gap: var(--s-3);
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.85rem 1.1rem;
+  border-radius: 999px;
+  border: 2px solid rgba(17, 17, 17, 0.40);
+  background: rgba(251, 247, 239, 0.95);
+  box-shadow: 0 10px 0 rgba(17, 17, 17, 0.12);
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 120ms ease, box-shadow 120ms ease;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 12px 0 rgba(17, 17, 17, 0.16);
+}
+
+.btn:active {
+  transform: translateY(2px);
+  box-shadow: 0 8px 0 rgba(17, 17, 17, 0.14);
+}
+
+.btn--primary {
+  background: rgba(242, 194, 0, 0.92);
+}
+
+.muted {
+  color: var(--muted);
+}
+
+/* Skip link */
+.skip {
+  position: absolute;
+  left: 0.75rem;
+  top: 0.75rem;
+  padding: 0.6rem 0.8rem;
+  background: var(--paper);
+  border: 2px solid rgba(17, 17, 17, 0.45);
+  border-radius: 999px;
+  transform: translateY(-160%);
+  transition: transform 120ms ease;
+  z-index: 999;
+}
+.skip:focus-visible {
+  transform: translateY(0);
+}
+

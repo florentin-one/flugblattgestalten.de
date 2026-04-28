@@ -1,0 +1,141 @@
+---
+import { Image } from "astro:assets";
+import plane from "../../assets/flugblatt-plane.png";
+
+type HeroContent = {
+  kicker: string;
+  headline: string;
+  subhead: string;
+  bullets: string[];
+  ctaPrimary: { label: string; href: string };
+  ctaSecondary: { label: string; href: string };
+};
+
+const { content } = Astro.props as { content: HeroContent };
+---
+
+<header class="hero section">
+  <div class="container hero__grid">
+    <div class="hero__copy note note--soft">
+      <p class="sticker">{content.kicker}</p>
+      <h1>
+        <span class="marker">{content.headline}</span>
+      </h1>
+      <p class="hero__sub">{content.subhead}</p>
+
+      <ul class="hero__bullets">
+        {content.bullets.map((b) => (
+          <li>{b}</li>
+        ))}
+      </ul>
+
+      <div class="btnRow">
+        <a class="btn btn--primary" href={content.ctaPrimary.href}>{content.ctaPrimary.label}</a>
+        <a class="btn" href={content.ctaSecondary.href}>{content.ctaSecondary.label}</a>
+      </div>
+    </div>
+
+    <div class="hero__visual" aria-hidden="false">
+      <Image
+        src={plane}
+        alt="Ein gelbes Papierflugzeug mit lächelndem Gesicht"
+        width={760}
+        quality={90}
+        class="hero__img"
+      />
+      <p class="hero__caption muted">
+        Lokal vor viral. Unter’m Radar ist manchmal schöner.
+      </p>
+    </div>
+  </div>
+</header>
+
+<style>
+  .hero {
+    padding-top: var(--s-12);
+  }
+
+  .hero__grid {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: var(--s-10);
+    align-items: center;
+  }
+
+  .hero__copy {
+    padding: var(--s-8);
+    transform: rotate(-0.35deg);
+  }
+
+  h1 {
+    margin: var(--s-4) 0 var(--s-3);
+    font-size: clamp(2rem, 4vw, 3.1rem);
+    line-height: 1.08;
+    letter-spacing: -0.02em;
+  }
+
+  .hero__sub {
+    margin: 0 0 var(--s-6);
+    color: var(--muted);
+    font-size: 1.05rem;
+    max-width: 55ch;
+  }
+
+  .hero__bullets {
+    margin: 0 0 var(--s-6);
+    padding-left: 1.15rem;
+    color: var(--muted);
+  }
+
+  .hero__visual {
+    display: grid;
+    justify-items: center;
+    gap: var(--s-4);
+  }
+
+  .hero__img {
+    filter: drop-shadow(0 14px 0 rgba(17, 17, 17, 0.12));
+    transform: rotate(1.25deg);
+  }
+
+  .hero__caption {
+    margin: 0;
+    font-size: 0.95rem;
+    text-align: center;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .hero__img {
+      animation: floaty 6s ease-in-out infinite;
+    }
+    @keyframes floaty {
+      0%,
+      100% {
+        transform: translateY(0) rotate(1.25deg);
+      }
+      50% {
+        transform: translateY(-8px) rotate(1.25deg);
+      }
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .hero__copy,
+    .hero__img {
+      transform: none;
+    }
+  }
+
+  @media (max-width: 880px) {
+    .hero__grid {
+      grid-template-columns: 1fr;
+    }
+    .hero__copy {
+      order: 2;
+    }
+    .hero__visual {
+      order: 1;
+    }
+  }
+</style>
+

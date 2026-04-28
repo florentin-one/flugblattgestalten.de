@@ -1,0 +1,98 @@
+---
+type HowItWorksContent = {
+  title: string;
+  subtitle: string;
+  steps: { title: string; text: string }[];
+};
+
+const { content } = Astro.props as { content: HowItWorksContent };
+---
+
+<section id="ablauf" class="section" aria-labelledby="how-title">
+  <div class="container">
+    <div class="how">
+      <div class="how__head">
+        <h2 id="how-title">{content.title}</h2>
+        <p class="muted">{content.subtitle}</p>
+      </div>
+
+      <ol class="how__steps">
+        {content.steps.map((s) => (
+          <li class="how__step note">
+            <div class="how__num" aria-hidden="true"></div>
+            <div class="how__body">
+              <h3>{s.title}</h3>
+              <p class="muted">{s.text}</p>
+            </div>
+          </li>
+        ))}
+      </ol>
+    </div>
+  </div>
+</section>
+
+<style>
+  h2 {
+    margin: 0 0 var(--s-3);
+    font-size: clamp(1.5rem, 2.2vw, 2rem);
+    letter-spacing: -0.01em;
+  }
+
+  .how__head p {
+    margin: 0;
+    max-width: 70ch;
+  }
+
+  .how__steps {
+    margin: var(--s-10) 0 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    gap: var(--s-6);
+  }
+
+  .how__step {
+    padding: var(--s-6);
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: var(--s-5);
+    align-items: start;
+  }
+
+  .how__num {
+    width: 2.4rem;
+    height: 2.4rem;
+    border-radius: 999px;
+    border: 2px solid rgba(17, 17, 17, 0.35);
+    background: rgba(242, 194, 0, 0.28);
+    box-shadow: 0 8px 0 rgba(17, 17, 17, 0.10);
+    position: relative;
+    margin-top: 0.15rem;
+  }
+
+  /* Render the actual number via CSS counter to keep markup simple */
+  .how__steps {
+    counter-reset: step;
+  }
+  .how__step {
+    counter-increment: step;
+  }
+  .how__num::after {
+    content: counter(step);
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    font-weight: 800;
+  }
+
+  .how__body h3 {
+    margin: 0 0 var(--s-2);
+    font-size: 1.15rem;
+  }
+  .how__body p {
+    margin: 0;
+    max-width: 70ch;
+  }
+</style>
+

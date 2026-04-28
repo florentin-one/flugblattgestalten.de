@@ -1,0 +1,102 @@
+---
+type Contact = {
+  title: string;
+  text: string;
+  email: string;
+  location: string;
+  note: string;
+};
+
+type FooterContent = {
+  smallprint: string;
+};
+
+const { contact, footer } = Astro.props as { contact: Contact; footer: FooterContent };
+---
+
+<section id="mitmachen" class="section" aria-labelledby="contact-title">
+  <div class="container">
+    <div class="contact note note--soft">
+      <div class="contact__head">
+        <h2 id="contact-title">{contact.title}</h2>
+        <p class="muted">{contact.text}</p>
+      </div>
+
+      <div class="contact__grid">
+        <div class="contact__item">
+          <h3>Mail</h3>
+          <p class="muted">
+            <a href={`mailto:${contact.email}`}>{contact.email}</a>
+          </p>
+        </div>
+        <div class="contact__item">
+          <h3>Ort</h3>
+          <p class="muted">{contact.location}</p>
+        </div>
+        <div class="contact__item">
+          <h3>Note</h3>
+          <p class="muted">{contact.note}</p>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer muted">
+      <span>{footer.smallprint}</span>
+    </footer>
+  </div>
+</section>
+
+<style>
+  .contact {
+    padding: var(--s-10);
+  }
+
+  h2 {
+    margin: 0 0 var(--s-3);
+    font-size: clamp(1.5rem, 2.2vw, 2rem);
+  }
+
+  .contact__head p {
+    margin: 0;
+    max-width: 70ch;
+  }
+
+  .contact__grid {
+    margin-top: var(--s-8);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--s-6);
+  }
+
+  .contact__item {
+    padding: var(--s-6);
+    border-radius: var(--radius-sm);
+    border: 2px solid rgba(17, 17, 17, 0.18);
+    background: rgba(251, 247, 239, 0.70);
+  }
+
+  .contact__item h3 {
+    margin: 0 0 var(--s-2);
+    font-size: 1.05rem;
+  }
+
+  .contact__item p {
+    margin: 0;
+  }
+
+  .footer {
+    margin-top: var(--s-10);
+    padding-bottom: var(--s-6);
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 0.95rem;
+  }
+
+  @media (max-width: 900px) {
+    .contact__grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+
