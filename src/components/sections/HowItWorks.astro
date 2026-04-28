@@ -19,7 +19,7 @@ const { content } = Astro.props as { content: HowItWorksContent };
       <ol class="how__steps">
         {
           content.steps.map((s) => (
-            <li class="how__step note">
+            <li class="how__step motto">
               <div class="how__num" aria-hidden="true" />
               <div class="how__body">
                 <h3>{s.title}</h3>

@@ -91,14 +91,14 @@ a:hover {
 }
 
 /* DIY building blocks */
-.note {
+.motto {
   background: linear-gradient(180deg, var(--paper), var(--paper-2));
   border: 2px solid rgba(17, 17, 17, 0.2);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
 }
 
-.note--soft {
+.motto--soft {
   box-shadow: var(--shadow-soft);
 }
 

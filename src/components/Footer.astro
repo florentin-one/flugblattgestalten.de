@@ -4,7 +4,7 @@ type Contact = {
   text: string;
   email: string;
   location: string;
-  note: string;
+  motto: string;
 };
 
 type FooterContent = {
@@ -19,7 +19,7 @@ const { contact, footer } = Astro.props as {
 
 <section id="mitmachen" class="section" aria-labelledby="contact-title">
   <div class="container">
-    <div class="contact note note--soft">
+    <div class="contact motto motto--soft">
       <div class="contact__head">
         <h2 id="contact-title">{contact.title}</h2>
         <p class="muted">{contact.text}</p>
@@ -37,8 +37,8 @@ const { contact, footer } = Astro.props as {
           <p class="muted">{contact.location}</p>
         </div>
         <div class="contact__item">
-          <h3>Note</h3>
-          <p class="muted">{contact.note}</p>
+          <h3>Motto</h3>
+          <p class="muted">{contact.motto}</p>
         </div>
       </div>
     </div>
