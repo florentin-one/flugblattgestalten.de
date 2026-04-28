@@ -26,9 +26,21 @@ body {
 
   /* DIY paper texture (pure CSS: subtle, lightweight) */
   background:
-    radial-gradient(1200px 800px at 10% 0%, rgba(242, 194, 0, 0.10), transparent 60%),
-    radial-gradient(900px 700px at 85% 10%, rgba(17, 17, 17, 0.05), transparent 62%),
-    radial-gradient(700px 500px at 30% 80%, rgba(17, 17, 17, 0.04), transparent 60%),
+    radial-gradient(
+      1200px 800px at 10% 0%,
+      rgba(242, 194, 0, 0.1),
+      transparent 60%
+    ),
+    radial-gradient(
+      900px 700px at 85% 10%,
+      rgba(17, 17, 17, 0.05),
+      transparent 62%
+    ),
+    radial-gradient(
+      700px 500px at 30% 80%,
+      rgba(17, 17, 17, 0.04),
+      transparent 60%
+    ),
     repeating-linear-gradient(
       -8deg,
       rgba(17, 17, 17, 0.016) 0px,
@@ -81,7 +93,7 @@ a:hover {
 /* DIY building blocks */
 .note {
   background: linear-gradient(180deg, var(--paper), var(--paper-2));
-  border: 2px solid rgba(17, 17, 17, 0.20);
+  border: 2px solid rgba(17, 17, 17, 0.2);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
 }
@@ -110,7 +122,7 @@ a:hover {
   position: absolute;
   left: -0.12em;
   right: -0.12em;
-  bottom: 0.10em;
+  bottom: 0.1em;
   height: 0.55em;
   background: rgba(242, 194, 0, 0.35);
   border-radius: 6px;
@@ -131,12 +143,14 @@ a:hover {
   gap: 0.5rem;
   padding: 0.85rem 1.1rem;
   border-radius: 999px;
-  border: 2px solid rgba(17, 17, 17, 0.40);
+  border: 2px solid rgba(17, 17, 17, 0.4);
   background: rgba(251, 247, 239, 0.95);
   box-shadow: 0 10px 0 rgba(17, 17, 17, 0.12);
   font-weight: 700;
   text-decoration: none;
-  transition: transform 120ms ease, box-shadow 120ms ease;
+  transition:
+    transform 120ms ease,
+    box-shadow 120ms ease;
 }
 
 .btn:hover {
@@ -173,4 +187,3 @@ a:hover {
 .skip:focus-visible {
   transform: translateY(0);
 }
-

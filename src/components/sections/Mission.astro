@@ -17,12 +17,14 @@ const { content } = Astro.props as { content: MissionContent };
       </div>
 
       <div class="mission__grid">
-        {content.points.map((p) => (
-          <article class="mission__card">
-            <h3>{p.title}</h3>
-            <p class="muted">{p.text}</p>
-          </article>
-        ))}
+        {
+          content.points.map((p) => (
+            <article class="mission__card">
+              <h3>{p.title}</h3>
+              <p class="muted">{p.text}</p>
+            </article>
+          ))
+        }
       </div>
     </div>
   </div>
@@ -54,8 +56,8 @@ const { content } = Astro.props as { content: MissionContent };
   .mission__card {
     padding: var(--s-6);
     border-radius: var(--radius-sm);
-    border: 2px dashed rgba(17, 17, 17, 0.20);
-    background: rgba(251, 247, 239, 0.70);
+    border: 2px dashed rgba(17, 17, 17, 0.2);
+    background: rgba(251, 247, 239, 0.7);
     transform: rotate(-0.2deg);
   }
 
@@ -87,4 +89,3 @@ const { content } = Astro.props as { content: MissionContent };
     }
   }
 </style>
-

@@ -24,14 +24,16 @@ const { content } = Astro.props as { content: HeroContent };
       <p class="hero__sub">{content.subhead}</p>
 
       <ul class="hero__bullets">
-        {content.bullets.map((b) => (
-          <li>{b}</li>
-        ))}
+        {content.bullets.map((b) => <li>{b}</li>)}
       </ul>
 
       <div class="btnRow">
-        <a class="btn btn--primary" href={content.ctaPrimary.href}>{content.ctaPrimary.label}</a>
-        <a class="btn" href={content.ctaSecondary.href}>{content.ctaSecondary.label}</a>
+        <a class="btn btn--primary" href={content.ctaPrimary.href}
+          >{content.ctaPrimary.label}</a
+        >
+        <a class="btn" href={content.ctaSecondary.href}
+          >{content.ctaSecondary.label}</a
+        >
       </div>
     </div>
 
@@ -138,4 +140,3 @@ const { content } = Astro.props as { content: HeroContent };
     }
   }
 </style>
-

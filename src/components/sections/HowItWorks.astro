@@ -17,15 +17,17 @@ const { content } = Astro.props as { content: HowItWorksContent };
       </div>
 
       <ol class="how__steps">
-        {content.steps.map((s) => (
-          <li class="how__step note">
-            <div class="how__num" aria-hidden="true"></div>
-            <div class="how__body">
-              <h3>{s.title}</h3>
-              <p class="muted">{s.text}</p>
-            </div>
-          </li>
-        ))}
+        {
+          content.steps.map((s) => (
+            <li class="how__step note">
+              <div class="how__num" aria-hidden="true" />
+              <div class="how__body">
+                <h3>{s.title}</h3>
+                <p class="muted">{s.text}</p>
+              </div>
+            </li>
+          ))
+        }
       </ol>
     </div>
   </div>
@@ -65,7 +67,7 @@ const { content } = Astro.props as { content: HowItWorksContent };
     border-radius: 999px;
     border: 2px solid rgba(17, 17, 17, 0.35);
     background: rgba(242, 194, 0, 0.28);
-    box-shadow: 0 8px 0 rgba(17, 17, 17, 0.10);
+    box-shadow: 0 8px 0 rgba(17, 17, 17, 0.1);
     position: relative;
     margin-top: 0.15rem;
   }
@@ -95,4 +97,3 @@ const { content } = Astro.props as { content: HowItWorksContent };
     max-width: 70ch;
   }
 </style>
-

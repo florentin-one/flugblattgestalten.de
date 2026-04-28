@@ -11,9 +11,12 @@
   --border: rgba(17, 17, 17, 0.16);
 
   /* Typography */
-  --font-sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial,
+  --font-sans:
+    ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial,
     "Apple Color Emoji", "Segoe UI Emoji";
-  --font-accent: ui-rounded, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+  --font-accent:
+    ui-rounded, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto,
+    Helvetica, Arial;
 
   /* Spacing */
   --s-1: 0.25rem;
@@ -30,10 +33,9 @@
   /* Radius & shadows */
   --radius: 18px;
   --radius-sm: 12px;
-  --shadow: 0 16px 0 rgba(17, 17, 17, 0.10);
-  --shadow-soft: 0 18px 35px rgba(17, 17, 17, 0.10);
+  --shadow: 0 16px 0 rgba(17, 17, 17, 0.1);
+  --shadow-soft: 0 18px 35px rgba(17, 17, 17, 0.1);
 
   /* Max width */
   --container: 68rem;
 }
-
