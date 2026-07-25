@@ -1,5 +1,5 @@
 {
-  "name": "flugblattgestalten",
+  "name": "flugblattgestalten-de",
   "type": "module",
   "engines": {
     "node": ">=22.12.0"
