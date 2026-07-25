@@ -2,6 +2,7 @@
 alwaysApply: false
 description: Deployment and build workflow guidelines for Cloudflare Pages
 ---
+
 # Deployment & Workflow
 
 ## Build Process

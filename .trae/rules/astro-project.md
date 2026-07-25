@@ -43,8 +43,8 @@ Always run `bun run check` before committing changes.
 ```astro
 ---
 // TypeScript frontmatter for logic
-import type { Props } from './types';
-import content from '@/content/landing.de.json';
+import type { Props } from "./types";
+import content from "@/content/landing.de.json";
 
 interface Props {
   // Define props with TypeScript
@@ -117,8 +117,8 @@ font-size: 2rem;
 ### Path Aliases
 
 ```ts
-import BaseLayout from '@/layouts/BaseLayout.astro';
-import content from '@/content/landing.de.json';
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import content from "@/content/landing.de.json";
 ```
 
 ## Image Handling
@@ -131,8 +131,8 @@ import content from '@/content/landing.de.json';
 
 ```astro
 ---
-import { Image } from 'astro:assets';
-import logo from '@/assets/flugblatt-plane.png';
+import { Image } from "astro:assets";
+import logo from "@/assets/flugblatt-plane.png";
 ---
 
 <Image src={logo} alt="Description" />

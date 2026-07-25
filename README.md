@@ -1,14 +1,18 @@
 # FlugblattGestalten.de 🌻
 
-> „Wir bieten an, Flugblätter zu gestalten, damit Leute wieder das Gefühl bekommen: Ihre Meinung ist unperfekt, absolut politisch – und darf gehört werden."
+> „Wir bieten an, Flugblätter zu gestalten, damit Leute wieder das Gefühl bekommen: Ihre Meinung ist unperfekt, absolut
+> politisch – und darf gehört werden."
 
-Landing-Page für FlugblattGestalten — eine Hannoveraner Initiative, die irgendwo zwischen Kunst & Aktivismus mit 'ner Prise groben Unfugs sitzt.
+Landing-Page für FlugblattGestalten — eine Hannoveraner Initiative, die irgendwo zwischen Kunst & Aktivismus mit 'ner
+Prise groben Unfugs sitzt.
 
 **Live:** [flugblattgestalten.de](https://flugblattgestalten.de)
 
 ## 🎯 Über das Projekt
 
-FlugblattGestalten ist eine Initiative, die Menschen zusammenbringt, um gemeinsam kreativ zu werden und politisch sichtbar zu sein. Wir gestalten Flugblätter, Postkarten, Plakate — und schaffen Räume, in denen Selbstwirksamkeit spürbar wird.
+FlugblattGestalten ist eine Initiative, die Menschen zusammenbringt, um gemeinsam kreativ zu werden und politisch
+sichtbar zu sein. Wir gestalten Flugblätter, Postkarten, Plakate — und schaffen Räume, in denen Selbstwirksamkeit
+spürbar wird.
 
 ### Unsere Werte
 
@@ -49,12 +53,12 @@ bun install
 
 ### Commands
 
-| Command              | Action                                           |
-| :------------------- | :----------------------------------------------- |
-| `bun run dev`        | Dev-Server starten auf `localhost:4321`          |
-| `bun run build`      | Production-Build erstellen nach `./dist/`        |
-| `bun run preview`    | Build lokal testen                               |
-| `bun run check`      | Astro & TypeScript prüfen                        |
+| Command           | Action                                    |
+| :---------------- | :---------------------------------------- |
+| `bun run dev`     | Dev-Server starten auf `localhost:4321`   |
+| `bun run build`   | Production-Build erstellen nach `./dist/` |
+| `bun run preview` | Build lokal testen                        |
+| `bun run check`   | Astro & TypeScript prüfen                 |
 
 ## 📁 Projektstruktur
 
@@ -76,7 +80,8 @@ bun install
 
 ## 📝 Content bearbeiten
 
-Alle Texte und Inhalte der Landing-Page sind in [`src/content/landing.de.json`](src/content/landing.de.json) zentralisiert.
+Alle Texte und Inhalte der Landing-Page sind in [`src/content/landing.de.json`](src/content/landing.de.json)
+zentralisiert.
 
 ```json
 {

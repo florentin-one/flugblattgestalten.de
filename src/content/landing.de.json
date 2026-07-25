@@ -7,11 +7,7 @@
     "kicker": "Kunst · Aktivismus · grober Unfug",
     "headline": "Flugblätter gestalten, damit Stimmen wieder hörbar werden.",
     "subhead": "„Deine Meinung ist unperfekt, absolut politisch – und darf gehört werden.“ Wir machen Räume, in denen Menschen gemeinsam kritzeln, drucken, rausgehen — und merken: Selbstwirksamkeit ist ansteckend.",
-    "bullets": [
-      "Alles kann, nix muss.",
-      "Lokal vor viral. Erstmal Hannover.",
-      "Gemeinschaft statt Algorithmus."
-    ],
+    "bullets": ["Alles kann, nix muss.", "Lokal vor viral. Erstmal Hannover.", "Gemeinschaft statt Algorithmus."],
     "ctaPrimary": {
       "label": "Mitmachen",
       "href": "#mitmachen"
