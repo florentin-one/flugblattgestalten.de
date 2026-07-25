@@ -26,21 +26,9 @@ body {
 
   /* DIY paper texture (pure CSS: subtle, lightweight) */
   background:
-    radial-gradient(
-      1200px 800px at 10% 0%,
-      rgba(242, 194, 0, 0.1),
-      transparent 60%
-    ),
-    radial-gradient(
-      900px 700px at 85% 10%,
-      rgba(17, 17, 17, 0.05),
-      transparent 62%
-    ),
-    radial-gradient(
-      700px 500px at 30% 80%,
-      rgba(17, 17, 17, 0.04),
-      transparent 60%
-    ),
+    radial-gradient(1200px 800px at 10% 0%, rgba(242, 194, 0, 0.1), transparent 60%),
+    radial-gradient(900px 700px at 85% 10%, rgba(17, 17, 17, 0.05), transparent 62%),
+    radial-gradient(700px 500px at 30% 80%, rgba(17, 17, 17, 0.04), transparent 60%),
     repeating-linear-gradient(
       -8deg,
       rgba(17, 17, 17, 0.016) 0px,

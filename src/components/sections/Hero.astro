@@ -28,12 +28,8 @@ const { content } = Astro.props as { content: HeroContent };
       </ul>
 
       <div class="btnRow">
-        <a class="btn btn--primary" href={content.ctaPrimary.href}
-          >{content.ctaPrimary.label}</a
-        >
-        <a class="btn" href={content.ctaSecondary.href}
-          >{content.ctaSecondary.label}</a
-        >
+        <a class="btn btn--primary" href={content.ctaPrimary.href}>{content.ctaPrimary.label}</a>
+        <a class="btn" href={content.ctaSecondary.href}>{content.ctaSecondary.label}</a>
       </div>
     </div>
 
@@ -45,9 +41,7 @@ const { content } = Astro.props as { content: HeroContent };
         quality={90}
         class="hero__img"
       />
-      <p class="hero__caption muted">
-        Lokal vor viral. Unter’m Radar ist manchmal schöner.
-      </p>
+      <p class="hero__caption muted">Lokal vor viral. Unter’m Radar ist manchmal schöner.</p>
     </div>
   </div>
 </header>
