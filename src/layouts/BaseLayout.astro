@@ -1,5 +1,6 @@
 ---
 import "../styles/global.css";
+import PostHog from "../components/posthog.astro";
 
 type Props = {
   title: string;
@@ -20,6 +21,7 @@ const { title, description } = Astro.props;
 
     <title>{title}</title>
     <meta name="description" content={description} />
+    <PostHog />
 
     <!-- OpenGraph (basic) -->
     <meta property="og:type" content="website" />

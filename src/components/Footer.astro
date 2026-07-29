@@ -29,7 +29,7 @@ const { contact, footer } = Astro.props as {
         <div class="contact__item">
           <h3>Mail</h3>
           <p class="muted">
-            <a href={`mailto:${contact.email}`}>{contact.email}</a>
+            <a href={`mailto:${contact.email}`} data-posthog-email>{contact.email}</a>
           </p>
         </div>
         <div class="contact__item">
@@ -48,6 +48,33 @@ const { contact, footer } = Astro.props as {
     </footer>
   </div>
 </section>
+
+<script is:inline>
+  document.addEventListener("DOMContentLoaded", function () {
+    var emailLink = document.querySelector("[data-posthog-email]");
+    if (emailLink) {
+      emailLink.addEventListener("click", function () {
+        window.posthog?.capture("contact_email_clicked");
+      });
+    }
+
+    var contactSection = document.getElementById("mitmachen");
+    if (contactSection && "IntersectionObserver" in window) {
+      var observed = false;
+      var observer = new IntersectionObserver(
+        function (entries) {
+          if (!observed && entries[0].isIntersecting) {
+            observed = true;
+            window.posthog?.capture("contact_section_viewed");
+            observer.disconnect();
+          }
+        },
+        { threshold: 0.2 }
+      );
+      observer.observe(contactSection);
+    }
+  });
+</script>
 
 <style>
   .contact {
