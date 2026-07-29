@@ -28,8 +28,10 @@ const { content } = Astro.props as { content: HeroContent };
       </ul>
 
       <div class="btnRow">
-        <a class="btn btn--primary" href={content.ctaPrimary.href}>{content.ctaPrimary.label}</a>
-        <a class="btn" href={content.ctaSecondary.href}>{content.ctaSecondary.label}</a>
+        <a class="btn btn--primary" href={content.ctaPrimary.href} data-posthog-cta="primary"
+          >{content.ctaPrimary.label}</a
+        >
+        <a class="btn" href={content.ctaSecondary.href} data-posthog-cta="secondary">{content.ctaSecondary.label}</a>
       </div>
     </div>
 
@@ -45,6 +47,18 @@ const { content } = Astro.props as { content: HeroContent };
     </div>
   </div>
 </header>
+
+<script is:inline>
+  document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll("[data-posthog-cta]").forEach(function (el) {
+      el.addEventListener("click", function () {
+        var variant = el.getAttribute("data-posthog-cta");
+        var eventName = variant === "primary" ? "cta_primary_clicked" : "cta_secondary_clicked";
+        window.posthog?.capture(eventName, { label: el.textContent?.trim(), href: el.getAttribute("href") });
+      });
+    });
+  });
+</script>
 
 <style>
   .hero {
